@@ -59,7 +59,11 @@ public class MovieRepository {
     }
 
     public void deleteDirectorByName(String dname) {
-
+        List<String> movies = mddb.get(dname);
+        for(String mname: movies)
+        {
+            mdb.remove(mname);
+        }
         ddb.remove(dname);
         mddb.remove(dname);
     }
