@@ -66,11 +66,12 @@ public class MovieRepository {
     public void deleteAllDirectors() {
 
         List<String> dnames = new ArrayList<>();
-        List<List<String>> mnames = new ArrayList<>();
+//        List<List<String>> mnames = new ArrayList<>();
+        List<List<String>> mnames = new ArrayList<>(mddb.values());
         for(String dname : ddb.keySet())
         {
             ddb.remove(dname);
-            mnames.add(mddb.get(dname));
+//            mnames.add(mddb.get(dname));
             mddb.remove(dname);
         }
         for(List<String> movies : mnames)
