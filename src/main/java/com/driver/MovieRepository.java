@@ -61,6 +61,7 @@ public class MovieRepository {
     public void deleteDirectorByName(String dname) {
 
         ddb.remove(dname);
+        mddb.remove(dname);
     }
 
     public void deleteAllDirectors() {
